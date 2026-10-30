@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 153;
+        let original = a;
+        let temp = a;
+        let  digit = 0;
+        while(temp > 0){
+            digit++;
+            temp = Math.floor(temp / 10);
+        }
+        temp = original;
+        let sum = 0;
+        while(temp > 0){
+            let rem = temp % 10;
+            sum += Math.pow(rem,digit);
+            temp =Math.floor(temp /10);
+        }
+        if(sum == original){
+            document.write("Armstrong");
+        }else{
+            document.write("not armstrong");
+        }
+    </script>
+</body>
+</html>
